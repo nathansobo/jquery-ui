@@ -475,7 +475,7 @@ $.ui.plugin.add("draggable", "connectToSortable", {
 					instance: sortable,
 					shouldRevert: sortable.options.revert
 				});
-				sortable._refreshItems();	//Do a one-time refresh at start to refresh the containerCache
+				sortable.refreshPositions();	//Do a one-time refreshPositions at start to initialize the containerCache
 				sortable._trigger("activate", event, uiSortable);
 			}
 		});
